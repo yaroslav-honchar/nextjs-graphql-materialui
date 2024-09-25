@@ -1,5 +1,6 @@
 import React from "react"
-import Image, { ImageProps } from "next/image"
+import type { ImageProps } from "next/image"
+import Image from "next/image"
 
 export const Img: React.FC<ImageProps> = ({ alt, src, ...props }) => {
   return (

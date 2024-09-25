@@ -1,4 +1,5 @@
-import { RefObject, useEffect } from "react"
+import type { RefObject } from "react"
+import { useEffect } from "react"
 
 /**
  * A custom React hook that adds an event listener to detect clicks outside a specified element.

@@ -1,6 +1,6 @@
 import cn from "classnames"
 import React from "react"
-import { IContainerProps } from "./Container.props"
+import type { IContainerProps } from "./Container.props"
 
 export const Container: React.FC<IContainerProps> = ({ children, className, size = "2xl" }) => {
   return (
