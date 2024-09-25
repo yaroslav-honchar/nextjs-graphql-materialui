@@ -1,5 +1,4 @@
 import React from "react"
-
 import { Container } from "@/shared/components"
 
 export const Footer: React.FC = () => {

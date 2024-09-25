@@ -1,7 +1,5 @@
 import type { Metadata } from "next"
-
 import React from "react"
-
 import "@/_app/styles/main.scss"
 
 export const metadata: Metadata = {

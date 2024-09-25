@@ -1,7 +1,5 @@
 import cn from "classnames"
-
 import React from "react"
-
 import { ITitleProps } from "./Title.props"
 
 export const Title: React.FC<ITitleProps> = ({ htmlTag = "h2", children, className, ...props }) => {

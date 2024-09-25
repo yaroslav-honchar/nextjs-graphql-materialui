@@ -1,9 +1,7 @@
 "use client"
 
 import { useLocale } from "next-intl"
-
 import React from "react"
-
 import { Link, usePathname } from "@/_app/localization"
 
 export const LangSwitcher: React.FC = () => {

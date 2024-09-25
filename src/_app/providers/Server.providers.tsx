@@ -1,7 +1,5 @@
 import { NextIntlClientProvider, useMessages } from "next-intl"
-
 import React from "react"
-
 import { unstable_setRequestLocale } from "next-intl/server"
 
 export const ServerProviders: React.FC<IProvidersProps> = ({ children, locale }) => {

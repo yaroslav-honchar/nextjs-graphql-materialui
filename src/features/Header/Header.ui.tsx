@@ -1,8 +1,6 @@
 import React from "react"
-
 import { LangSwitcher } from "@/entities/LangSwitcher"
 import { ThemeSwitcher } from "@/entities/ThemeSwitcher"
-
 import { Container } from "@/shared/components"
 
 export const Header: React.FC = () => {

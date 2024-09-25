@@ -1,5 +1,4 @@
 import { registerApolloClient } from "@apollo/experimental-nextjs-app-support"
-
 import { client } from "./gql-client"
 
 /**

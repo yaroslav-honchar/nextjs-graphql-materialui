@@ -23,7 +23,7 @@
     "../(.*)$",
     "./(.*)$"
   ],
-  "importOrderSeparation": true,
+  "importOrderSeparation": false,
   "importOrderSortSpecifiers": true,
   "importOrderGroupNamespaceSpecifiers": true
 }

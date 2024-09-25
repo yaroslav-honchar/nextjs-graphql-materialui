@@ -1,7 +1,5 @@
 import cn from "classnames"
-
 import React from "react"
-
 import { ISectionProps } from "./Section.props"
 
 export const Section: React.FC<ISectionProps> = ({ children, className }) => {

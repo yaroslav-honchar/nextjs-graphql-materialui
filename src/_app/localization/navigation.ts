@@ -1,7 +1,5 @@
 import React from "react"
-
 import { createSharedPathnamesNavigation } from "next-intl/navigation"
-
 import { localeConfig } from "./config"
 
 const { locales, localePrefix } = localeConfig
