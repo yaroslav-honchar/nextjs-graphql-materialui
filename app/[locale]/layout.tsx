@@ -1,11 +1,8 @@
 import React from "react"
-
-import { interFont } from "@/_app/fonts"
+import { fontPrimary } from "@/_app/fonts"
 import { localeConfig } from "@/_app/localization"
-
 import { Layout } from "@/widgets/Layout"
 import { unstable_setRequestLocale } from "next-intl/server"
-
 import { ILocaleLayoutProps } from "./layout.props"
 
 export { metadata } from "./layout.metadata"
@@ -22,7 +19,7 @@ export default function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={interFont.className}>
+      <body className={fontPrimary.className}>
         <Layout locale={locale}>{children}</Layout>
       </body>
     </html>

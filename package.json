@@ -22,9 +22,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint src/**/*.{ts,tsx} --fix --config .eslintrc.json",
-    "format": "prettier --log-level error --write **/*.{ts,tsx,css,scss}",
-    "stop": "npx kill-port 4040",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix --config .eslintrc.json",
+    "format": "prettier --log-level warn --write **/*.{ts,tsx,css}",
+    "stop": "npx kill-port 3000",
     "prepare": "husky"
   },
   "dependencies": {
@@ -32,7 +32,12 @@
     "@apollo/experimental-nextjs-app-support": "^0.11.3",
     "@apollo/server": "^4.11.0",
     "@as-integrations/next": "^3.1.0",
+    "@emotion/cache": "^11.13.1",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
     "@fontsource/roboto": "^5.0.8",
+    "@mui/material": "^6.1.1",
+    "@mui/material-nextjs": "^6.1.1",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.1",
     "classnames": "^2.5.1",
@@ -41,7 +46,6 @@
     "micro": "^10.0.1",
     "next": "^14.2.2",
     "next-intl": "^3.7.0",
-    "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18"
   },

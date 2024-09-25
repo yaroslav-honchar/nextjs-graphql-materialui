@@ -1,1 +1,1 @@
-export { interFont } from "./google"
+export { fontPrimary } from "./google"
