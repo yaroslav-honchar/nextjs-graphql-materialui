@@ -9,21 +9,8 @@ import { Layout } from "@/widgets/Layout"
 import { unstable_setRequestLocale } from "next-intl/server"
 
 export const metadata: Metadata = {
-  title: "Yaroslav's starter kit",
-  description: "Yaroslav's starter kit",
-  robots: {
-    index: false,
-    follow: true,
-    nocache: true,
-    googleBot: {
-      index: true,
-      follow: false,
-      noimageindex: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+  title: "NextJS + GraphQL + TypeScript",
+  description: "NextJS + GraphQL + TypeScript",
 }
 
 export function generateStaticParams() {

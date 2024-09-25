@@ -1,7 +1,16 @@
 {
-  "name": "template",
+  "name": "nextjs-graphql-typescript",
   "version": "0.1.0",
   "private": true,
+  "keywords": [
+    "nextjs",
+    "graphql",
+    "typescript",
+    "apollo",
+    "fsd",
+    "fullstack",
+    "react"
+  ],
   "engines": {
     "npm": ">=10.2.4",
     "node": ">=20.11.1"

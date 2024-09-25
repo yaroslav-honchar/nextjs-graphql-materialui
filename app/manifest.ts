@@ -2,9 +2,9 @@ import { MetadataRoute } from "next"
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Yaroslav Honchar",
-    short_name: "Yaroslav Honchar",
-    description: "Yaroslav Honchar",
+    name: "NextJS + GraphQL + TypeScript",
+    short_name: "NextJS + GraphQL + TypeScript",
+    description: "NextJS + GraphQL + TypeScript",
     start_url: "/",
     display: "standalone",
     background_color: "#fff",
