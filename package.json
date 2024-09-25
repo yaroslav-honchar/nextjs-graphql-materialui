@@ -6,6 +6,9 @@
     "npm": ">=10.2.4",
     "node": ">=20.11.1"
   },
+  "resolutions": {
+    "graphql": "^15.5.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -16,10 +19,16 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@apollo/client": "^3.11.8",
+    "@apollo/server": "^4.11.0",
+    "@as-integrations/next": "^3.1.0",
     "@fontsource/roboto": "^5.0.8",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.1",
     "classnames": "^2.5.1",
+    "graphql": "^16.9.0",
+    "graphql-tag": "^2.12.6",
+    "micro": "^10.0.1",
     "next": "^14.2.2",
     "next-intl": "^3.7.0",
     "next-themes": "^0.3.0",

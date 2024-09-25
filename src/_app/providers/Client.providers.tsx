@@ -10,7 +10,7 @@ export const ClientProviders: React.FC<PropsWithChildren> = ({ children }) => {
   const isMounted = useMounted()
 
   if (!isMounted) {
-    return <>{children}</>
+    return children
   }
 
   return <ThemeProvider attribute={"class"}>{children}</ThemeProvider>
