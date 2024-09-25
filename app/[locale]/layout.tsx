@@ -1,6 +1,4 @@
-import type { Metadata } from "next"
-
-import React, { PropsWithChildren } from "react"
+import React from "react"
 
 import { interFont } from "@/_app/fonts"
 import { localeConfig } from "@/_app/localization"
@@ -8,10 +6,9 @@ import { localeConfig } from "@/_app/localization"
 import { Layout } from "@/widgets/Layout"
 import { unstable_setRequestLocale } from "next-intl/server"
 
-export const metadata: Metadata = {
-  title: "NextJS + GraphQL + TypeScript",
-  description: "NextJS + GraphQL + TypeScript",
-}
+import { ILocaleLayoutProps } from "./layout.props"
+
+export { metadata } from "./layout.metadata"
 
 export function generateStaticParams() {
   return localeConfig.locales.map((locale: string) => ({ locale }))
@@ -30,10 +27,4 @@ export default function LocaleLayout({
       </body>
     </html>
   )
-}
-
-export interface ILocaleLayoutProps extends PropsWithChildren {
-  params: {
-    locale: string
-  }
 }
