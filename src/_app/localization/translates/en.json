@@ -1,0 +1,7 @@
+{
+  "Common": {},
+  "StarterScreen": {
+    "title": "Hey there, \uD83D\uDC4B!",
+    "description": "This project template is designed to help you get started quickly with Next.js, using Feature Sliced Design and Next Intl for internationalization."
+  }
+}

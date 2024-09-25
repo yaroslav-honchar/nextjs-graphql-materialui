@@ -1,0 +1,7 @@
+{
+  "Common": {},
+  "StarterScreen": {
+    "title": "Привіт, \uD83D\uDC4B!",
+    "description": "Цей шаблон проекту призначений для швидкого старту з Next.js, використовуючи Feature Sliced Design та Next Intl для інтернаціоналізації."
+  }
+}
