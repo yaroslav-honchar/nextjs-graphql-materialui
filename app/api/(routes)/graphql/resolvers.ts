@@ -1,8 +1,10 @@
-import { moviesModule } from "#/app/api/_modules/movies/movies.module"
+import type { Context } from "#/app/api/(routes)/graphql/_types/context.type"
+import type { ApolloServerOptions } from "@apollo/server"
 
-export const resolvers = {
+export const resolvers: ApolloServerOptions<Context>["resolvers"] = {
   Query: {
-    hello: () => "Hello world! ",
-    movies: async () => await moviesModule(),
+    movies: async (_, __, { dataSources }) => {
+      return await dataSources.moviesService.getMovies()
+    },
   },
 }
