@@ -13,10 +13,12 @@ const server = new ApolloServer<Context>({
 
 const handler = startServerAndCreateNextHandler<NextRequest, Context>(server, {
   context: async (req) => {
+    const language = req.headers.get("accept-language") || "en-US"
+
     return {
       req,
       dataSources: {
-        moviesService: new MoviesAPI(),
+        moviesService: new MoviesAPI(language),
       },
     }
   },
