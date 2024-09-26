@@ -2,17 +2,29 @@ import React from "react"
 import { ClientProviders, ServerProviders } from "@/_app/providers"
 import { Footer } from "@/features/Footer"
 import { Header } from "@/features/Header"
+import { Box } from "@mui/material"
 import type { ILayoutProps } from "./Layout.props"
 
 export const Layout: React.FC<ILayoutProps> = ({ children, locale }) => {
   return (
     <ServerProviders locale={locale}>
       <ClientProviders>
-        <div className={"min-h-screen w-full flex flex-col"}>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            minHeight: "100vh",
+          }}
+        >
           <Header />
-          <main className={"flex-grow flex flex-col"}>{children}</main>
+          <Box
+            component={"main"}
+            sx={{ flexGrow: 1 }}
+          >
+            {children}
+          </Box>
           <Footer />
-        </div>
+        </Box>
       </ClientProviders>
     </ServerProviders>
   )

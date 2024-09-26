@@ -1,15 +1,20 @@
 import React from "react"
 import { LangSwitcher } from "@/entities/LangSwitcher"
-import { Container } from "@/shared/components"
+import { Box, Container } from "@mui/material"
 
 export const Header: React.FC = () => {
   return (
-    <header className={"py-4"}>
-      <Container className={"flex gap-2 items-center justify-end"}>
-        <div className="flex gap-4 items-center">
-          <LangSwitcher />
-        </div>
+    <Box sx={{ paddingBlock: "1rem" }}>
+      <Container
+        sx={{
+          display: "flex",
+          justifyContent: "flex-end",
+          alignItems: "center",
+          gap: ".5rem",
+        }}
+      >
+        <LangSwitcher />
       </Container>
-    </header>
+    </Box>
   )
 }

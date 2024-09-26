@@ -1,13 +1,13 @@
 import React from "react"
-import { Container } from "@/shared/components"
+import { Container, Typography } from "@mui/material"
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className={"pb-8"}>
+    <footer>
       <Container>
-        <p className={"text-center"}>{currentYear}</p>
+        <Typography variant={"caption"}>{currentYear}</Typography>
       </Container>
     </footer>
   )

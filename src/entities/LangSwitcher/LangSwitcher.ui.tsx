@@ -2,19 +2,20 @@
 
 import { useLocale } from "next-intl"
 import React from "react"
-import { Link, usePathname } from "@/_app/localization"
+import { usePathname } from "@/_app/localization"
+import { RouterLink } from "@/shared/components/RouterLink"
 
 export const LangSwitcher: React.FC = () => {
   const locale = useLocale()
   const pathName = usePathname()
 
   return (
-    <Link
-      className={"uppercase"}
+    <RouterLink
+      sx={{ textTransform: "uppercase" }}
       href={pathName}
       locale={locale === "en" ? "uk" : "en"}
     >
-      {locale}
-    </Link>
+      {locale === "en" ? "uk" : "en"}
+    </RouterLink>
   )
 }
