@@ -3,7 +3,10 @@ import type { LinkProps } from "@/_app/localization"
 import { Link } from "@/_app/localization"
 import { styled } from "@mui/material/styles"
 
-const StyledLink = styled(Link)()
+const StyledLink = styled(Link)({
+  textDecoration: "none",
+  color: "inherit",
+})
 
 export type RouterLinkkProps = LinkProps & React.ComponentProps<typeof StyledLink>
 
