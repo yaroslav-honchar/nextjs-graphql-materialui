@@ -1,8 +1,5 @@
+import type { MoviePreviewType } from "@/shared/types"
+
 export interface ICardMovieProps {
-  // releaseAt
-  // title
-  // vote
-  // rate
-  // img
-  // id
+  movie: MoviePreviewType
 }

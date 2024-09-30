@@ -1,4 +1,4 @@
-export class Document {
+export class DocumentWorker {
   /**
    * Sets the value of a CSS variable.
    *

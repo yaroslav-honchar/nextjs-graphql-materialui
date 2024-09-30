@@ -2,8 +2,10 @@
 
 import { gql } from "graphql-tag"
 import React from "react"
+import { CardMovie } from "@/features/CardMovie"
 import { useClientQuery } from "@/shared/hooks/use-client-query"
 import type { EntitiesListPickType, MoviePreviewType } from "@/shared/types"
+import { Container } from "@mui/material"
 import Grid from "@mui/material/Grid2"
 
 const QUERY_TRADINGS = gql`
@@ -34,21 +36,20 @@ export const Tradings: React.FC = () => {
   const movies = data.tradings.results
 
   return (
-    <Grid
-      container
-      spacing={2}
-    >
-      {movies.map((movie: MoviePreviewType) => {
-        const { title } = movie
-        return (
+    <Container>
+      <Grid
+        container
+        spacing={2}
+      >
+        {movies.map((movie: MoviePreviewType) => (
           <Grid
             key={movie.id}
-            size={8}
+            size={2}
           >
-            {title}
+            <CardMovie movie={movie} />
           </Grid>
-        )
-      })}
-    </Grid>
+        ))}
+      </Grid>
+    </Container>
   )
 }

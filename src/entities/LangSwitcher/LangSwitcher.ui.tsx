@@ -3,6 +3,7 @@
 import { useLocale } from "next-intl"
 import React from "react"
 import { usePathname, useRouter } from "@/_app/localization"
+import LanguageIcon from "@mui/icons-material/Language"
 import { Button } from "@mui/material"
 
 export const LangSwitcher: React.FC = () => {
@@ -18,10 +19,23 @@ export const LangSwitcher: React.FC = () => {
 
   return (
     <Button
-      sx={{ textTransform: "uppercase" }}
+      sx={{
+        display: "flex",
+        textTransform: "uppercase",
+        with: 40,
+        height: 40,
+      }}
+      variant={"contained"}
+      color={"secondary"}
       onClick={onClickHandle}
     >
-      {nextLocale}
+      <LanguageIcon
+        sx={{
+          with: 32,
+          height: 32,
+        }}
+      />
+      {/*{nextLocale}*/}
     </Button>
   )
 }

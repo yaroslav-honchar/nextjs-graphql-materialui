@@ -1,23 +1,21 @@
 import React from "react"
-import type { LinkProps } from "@/_app/localization"
 import { Link } from "@/_app/localization"
 import { styled } from "@mui/material/styles"
+import type { IRouterLinkProps } from "./RouterLink.props"
 
-const StyledLink = styled(Link)({
+export const StyledRouterLink = styled(Link)({
   textDecoration: "none",
   color: "inherit",
 })
 
-export type RouterLinkkProps = LinkProps & React.ComponentProps<typeof StyledLink>
-
-export const RouterLink: React.FC<RouterLinkkProps> = ({ locale, href, children, ...rest }) => {
+export const RouterLink: React.FC<IRouterLinkProps> = ({ locale, href, children, ...rest }) => {
   return (
-    <StyledLink
+    <StyledRouterLink
       locale={locale}
       href={href}
       {...rest}
     >
       {children}
-    </StyledLink>
+    </StyledRouterLink>
   )
 }
