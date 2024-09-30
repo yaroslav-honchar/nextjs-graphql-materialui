@@ -8,10 +8,10 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: "#1BC29D",
+      main: "#9AF7E0",
     },
     secondary: {
-      main: "#20CC4A",
+      main: "#A2A7F0",
     },
     error: {
       light: "#ffb3b3",

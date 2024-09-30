@@ -26,7 +26,7 @@ export const Logo: React.FC<LogoProps> = ({ sx, ...rest }) => {
         sx={{
           width: 40,
           height: 40,
-          mr: 1,
+          mr: 0.5,
         }}
       />
       <Typography
