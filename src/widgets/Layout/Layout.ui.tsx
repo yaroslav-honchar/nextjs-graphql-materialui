@@ -19,7 +19,7 @@ export const Layout: React.FC<ILayoutProps> = ({ children, locale }) => {
           <Header />
           <Box
             component={"main"}
-            sx={{ flexGrow: 1, paddingTop: "var(--header-height)" }}
+            sx={{ flexGrow: 1, paddingTop: "var(--header-height)", overflow: "hidden" }}
           >
             {children}
           </Box>

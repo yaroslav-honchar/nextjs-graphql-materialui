@@ -3,3 +3,23 @@ body,
 :root {
   height: 100%;
 }
+
+:root {
+  --heaader-height: 72px;
+  --scrollbar-width: 0px;
+  --sb-size: 4px;
+}
+
+*::-webkit-scrollbar {
+  width: var(--sb-size);
+  height: var(--sb-size);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #A2A7F0;
+  border-radius: var(--sb-size);
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}

@@ -10,7 +10,15 @@ export const CardMovie: React.FC<ICardMovieProps> = ({ movie }) => {
   const { poster_path, title, release_date } = movie
 
   return (
-    <Card sx={{ width: "100%", height: "100%", display: "flex", flexDirection: "column" }}>
+    <Card
+      sx={{
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        boxShadow: "none",
+      }}
+    >
       <Box
         sx={{
           position: "relative",
@@ -30,16 +38,24 @@ export const CardMovie: React.FC<ICardMovieProps> = ({ movie }) => {
           alt={title}
         />
       </Box>
-      <CardContent sx={{ flexGrow: 1 }}>
+      <CardContent sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}>
         <Typography
-          gutterBottom
-          variant="h5"
-          component="div"
+          sx={{
+            display: "-webkit-box",
+            "text-overflow": "ellipsis",
+            overflow: "hidden",
+            "-webkit-line-clamp": "2",
+            "-webkit-box-orient": "vertical",
+          }}
+          variant="subtitle2"
+          component="p"
         >
           {title}
         </Typography>
         <Typography
-          gutterBottom
+          sx={{
+            mt: "auto",
+          }}
           variant="caption"
           component="p"
         >
