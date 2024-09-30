@@ -1,8 +1,10 @@
 "use client"
 
 import React from "react"
+import { fontSecondary } from "@/_app/fonts"
 import { RouterLink } from "@/shared/components/RouterLink"
 import { Typography } from "@mui/material"
+import { LogoIcon } from "./Logo.icon"
 import type { LogoProps } from "./Logo.props"
 
 export const Logo: React.FC<LogoProps> = ({ sx, ...rest }) => {
@@ -11,6 +13,8 @@ export const Logo: React.FC<LogoProps> = ({ sx, ...rest }) => {
       href={"/"}
       sx={{
         ...sx,
+        display: "flex",
+        alignItems: "center",
         transition: "color .3s",
         "&:hover": {
           color: "primary.main",
@@ -18,11 +22,22 @@ export const Logo: React.FC<LogoProps> = ({ sx, ...rest }) => {
       }}
       {...rest}
     >
+      <LogoIcon
+        sx={{
+          width: 40,
+          height: 40,
+          mr: 1,
+        }}
+      />
       <Typography
-        variant="h6"
+        variant="h5"
+        sx={{
+          fontFamily: fontSecondary.style.fontFamily,
+          fontWeight: 500,
+        }}
         component={"span"}
       >
-        Movies
+        Movie
       </Typography>
     </RouterLink>
   )

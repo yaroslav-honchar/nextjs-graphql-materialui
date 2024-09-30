@@ -1,1 +1,1 @@
-export { fontPrimary } from "./google"
+export { fontPrimary, fontSecondary } from "./google"
