@@ -1,4 +1,4 @@
-export interface IMovie {
+interface IMovie {
   adult: boolean
   backdrop_path: string
   genre_ids: number[]
@@ -14,3 +14,11 @@ export interface IMovie {
   vote_average: number
   vote_count: number
 }
+
+type MoviePickType<PickKeys extends keyof IMovie> = Pick<IMovie, PickKeys>
+
+type MoviePreviewType = MoviePickType<
+  "id" | "title" | "poster_path" | "release_date" | "vote_average" | "vote_count"
+>
+
+export type { IMovie, MoviePreviewType, MoviePickType }

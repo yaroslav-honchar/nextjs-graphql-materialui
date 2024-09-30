@@ -1,5 +1,5 @@
-import { getMoviedbTokenConfig } from "#/app/api/_configs/get-moviedb-token.config"
 import { type AugmentedRequest, RESTDataSource } from "@apollo/datasource-rest"
+import { getMoviedbTokenConfig } from "#/app/api/_configs/get-moviedb-token.config"
 
 export class CoreAPI extends RESTDataSource {
   override baseURL = "https://api.themoviedb.org/3/"

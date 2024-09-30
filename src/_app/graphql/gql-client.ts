@@ -15,7 +15,9 @@ import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client"
  * `
  *
  * export const Client: React.FC = () => {
- *   const { data } = useSuspenseQuery(query)
+ *   const { data } = useSuspenseQuery(query, {
+ *      client: client
+ *   })
  *
  *   return (
  *     <>

@@ -1,4 +1,4 @@
-import type { IMovies } from "#/app/api/_types/movies.interface"
+import type { IEntitiesList, IMovie } from "@/shared/types"
 import { CoreAPI } from "./core.service"
 
 export class MoviesAPI extends CoreAPI {
@@ -6,7 +6,11 @@ export class MoviesAPI extends CoreAPI {
     super(language)
   }
 
-  async getMovies(): Promise<IMovies> {
-    return await this.get<IMovies>("discover/movie")
+  async getMovies(): Promise<IEntitiesList<IMovie>> {
+    return await this.get<IEntitiesList<IMovie>>("discover/movie")
+  }
+
+  async getTrending(timeWindow: string): Promise<IEntitiesList<IMovie>> {
+    return await this.get<IEntitiesList<IMovie>>(`trending/movie/${timeWindow}`)
   }
 }

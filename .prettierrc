@@ -15,6 +15,7 @@
   "importOrder": [
     "<THIRD_PARTY_MODULES>",
     "^(react|react-.*|@react-.*)$",
+    "@(.*)$",
     "@/_app/(.*)$",
     "@/_pages/(.*)$",
     "@/features/(.*)$",

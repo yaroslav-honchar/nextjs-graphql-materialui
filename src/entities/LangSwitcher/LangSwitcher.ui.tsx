@@ -2,20 +2,26 @@
 
 import { useLocale } from "next-intl"
 import React from "react"
-import { usePathname } from "@/_app/localization"
-import { RouterLink } from "@/shared/components/RouterLink"
+import { usePathname, useRouter } from "@/_app/localization"
+import { Button } from "@mui/material"
 
 export const LangSwitcher: React.FC = () => {
   const locale = useLocale()
-  const pathName = usePathname()
+  const router = useRouter()
+  const pathname = usePathname()
+  const nextLocale = locale === "en" ? "uk" : "en"
+
+  const onClickHandle = () => {
+    router.replace(pathname, { locale: nextLocale })
+    router.refresh()
+  }
 
   return (
-    <RouterLink
+    <Button
       sx={{ textTransform: "uppercase" }}
-      href={pathName}
-      locale={locale === "en" ? "uk" : "en"}
+      onClick={onClickHandle}
     >
-      {locale === "en" ? "uk" : "en"}
-    </RouterLink>
+      {nextLocale}
+    </Button>
   )
 }
