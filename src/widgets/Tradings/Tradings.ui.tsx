@@ -1,9 +1,10 @@
 "use client"
 
+import { useTranslations } from "next-intl"
 import React from "react"
 import { CardMovie } from "@/features/CardMovie"
 import type { MoviePreviewType } from "@/shared/types"
-import { Box, Container } from "@mui/material"
+import { Box, Container, Typography } from "@mui/material"
 
 // const QUERY_TRADINGS = gql`
 //   query {
@@ -194,6 +195,7 @@ const { data } = {
 }
 
 export const Tradings: React.FC = () => {
+  const tTradings = useTranslations("Tradings")
   // const { data, error, loading } = useClientQuery<ITradingsResult>(QUERY_TRADINGS)
   // if (loading) return <div>Loading...</div>
   // if (error) return <div>Error</div>
@@ -202,7 +204,21 @@ export const Tradings: React.FC = () => {
   const movies = data.tradings.results
 
   return (
-    <Container maxWidth={"xl"}>
+    <Container
+      sx={{
+        paddingBlock: 4,
+      }}
+      maxWidth={"xl"}
+      component={"section"}
+    >
+      <Typography
+        component={"h2"}
+        variant={"h3"}
+        sx={{ marginBottom: 4 }}
+      >
+        {tTradings("title")}
+      </Typography>
+
       <Box
         sx={{
           display: "flex",
