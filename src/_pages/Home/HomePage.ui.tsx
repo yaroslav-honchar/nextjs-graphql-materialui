@@ -1,3 +1,4 @@
+import { MainHero } from "@/widgets/MainHero"
 import { Tradings } from "@/widgets/Tradings"
 import { unstable_setRequestLocale } from "next-intl/server"
 import type { IHomePageProps } from "./HomePage.props"
@@ -7,6 +8,7 @@ export async function HomePage({ params: { locale } }: IHomePageProps) {
 
   return (
     <>
+      <MainHero />
       <Tradings />
     </>
   )
