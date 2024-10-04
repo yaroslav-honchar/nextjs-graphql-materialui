@@ -72,4 +72,4 @@ export const LogoIcon = styled((props) => (
       fill="#151B28"
     />
   </svg>
-))()
+))({})

@@ -4,19 +4,8 @@ import { format } from "date-fns"
 import React from "react"
 import { Image } from "@/shared/components/Image"
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz"
-import {
-  Box,
-  Button,
-  Card,
-  CardContent,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-  Popover,
-  Tooltip,
-  Typography,
-} from "@mui/material"
+import { Box, Button, Card, CardContent, Popover, Tooltip, Typography } from "@mui/material"
+import { CardMovieActions } from "./CardMovie.actions"
 import type { ICardMovieProps } from "./CardMovie.props"
 
 export const CardMovie: React.FC<ICardMovieProps> = ({ movie }) => {
@@ -47,19 +36,10 @@ export const CardMovie: React.FC<ICardMovieProps> = ({ movie }) => {
           horizontal: "left",
         }}
       >
-        <List>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemText primary="Trash" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemText primary="Spam" />
-            </ListItemButton>
-          </ListItem>
-        </List>
+        <CardMovieActions />
       </Popover>
+
+      {/* Movie card wrapped in tooltip*/}
       <Tooltip title={title}>
         <Card
           sx={{
@@ -79,6 +59,7 @@ export const CardMovie: React.FC<ICardMovieProps> = ({ movie }) => {
             }}
           >
             <Button
+              className={"movie-card-action-popup-button"}
               variant="contained"
               onClick={handleClick}
               sx={{
@@ -138,10 +119,10 @@ export const CardMovie: React.FC<ICardMovieProps> = ({ movie }) => {
             <Typography
               sx={{
                 display: "-webkit-box",
-                "text-overflow": "ellipsis",
+                textOverflow: "ellipsis",
                 overflow: "hidden",
-                "-webkit-line-clamp": "1",
-                "-webkit-box-orient": "vertical",
+                WebkitLineClamp: "1",
+                WebkitBoxOrient: "vertical",
                 fontWeight: 600,
               }}
               variant="subtitle2"
