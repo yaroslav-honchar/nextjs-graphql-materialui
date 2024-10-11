@@ -4,8 +4,18 @@ import { format } from "date-fns"
 import React from "react"
 import { Image } from "@/shared/components/Image"
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz"
-import { Box, Button, Card, CardContent, Popover, Tooltip, Typography } from "@mui/material"
-import { CardMovieActions } from "./CardMovie.actions"
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  List,
+  ListItem,
+  Popover,
+  Tooltip,
+  Typography,
+} from "@mui/material"
+import { actions } from "./CardMovie.actions"
 import type { ICardMovieProps } from "./CardMovie.props"
 
 export const CardMovie: React.FC<ICardMovieProps> = ({ movie }) => {
@@ -36,7 +46,24 @@ export const CardMovie: React.FC<ICardMovieProps> = ({ movie }) => {
           horizontal: "left",
         }}
       >
-        <CardMovieActions />
+        <List>
+          {actions.map(({ label, icon: Icon }) => (
+            <ListItem
+              key={label}
+              disablePadding
+            >
+              <Button
+                startIcon={<Icon />}
+                variant={"text"}
+                sx={{
+                  color: "text.primary",
+                }}
+              >
+                {label}
+              </Button>
+            </ListItem>
+          ))}
+        </List>
       </Popover>
 
       {/* Movie card wrapped in tooltip*/}
