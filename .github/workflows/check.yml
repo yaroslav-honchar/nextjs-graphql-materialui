@@ -10,14 +10,13 @@ jobs:
         run: npm ci --legacy-peer-deps
       - name: Lint
         run: npm run lint
-#  test:
-#    TODO: Uncomment this block after adding tests
-#    needs: lint
-#    runs-on: ubuntu-22.04
-#    steps:
-#      - name: Checkout
-#        uses: actions/checkout@v3
-#      - name: Install deps
-#        run: npm ci --legacy-peer-deps
-#      - name: Test
-#        run: npm run test
+  test:
+    needs: lint
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install deps
+        run: npm ci --legacy-peer-deps
+      - name: Test
+        run: npm run test

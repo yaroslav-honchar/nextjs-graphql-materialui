@@ -1,21 +1,29 @@
+"use client"
+
 import React from "react"
+import type { LinkProps } from "@/_app/localization"
 import { Link } from "@/_app/localization"
-import { styled } from "@mui/material/styles"
-import type { IRouterLinkProps } from "./RouterLink.props"
+import type { ButtonProps } from "@mui/material"
+import { Button } from "@mui/material"
 
-export const StyledRouterLink = styled(Link)({
-  textDecoration: "none",
-  color: "inherit",
-})
-
-export const RouterLink: React.FC<IRouterLinkProps> = ({ locale, href, children, ...rest }) => {
+export const RouterLink: React.FC<LinkProps & ButtonProps> = ({
+  locale,
+  href,
+  children,
+  variant,
+  color,
+  ...rest
+}) => {
   return (
-    <StyledRouterLink
+    <Button
+      component={Link}
       locale={locale}
       href={href}
+      variant={variant || "text"}
+      color={color || "secondary"}
       {...rest}
     >
       {children}
-    </StyledRouterLink>
+    </Button>
   )
 }

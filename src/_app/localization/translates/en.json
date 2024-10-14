@@ -2,5 +2,9 @@
   "Common": {},
   "Tradings": {
     "title": "Trending"
+  },
+  "NotFound": {
+    "title": "Page is not found",
+    "go-home": "Go to home!"
   }
 }
