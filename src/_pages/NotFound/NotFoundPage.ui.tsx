@@ -1,3 +1,5 @@
+import React from "react"
+
 export function NotFoundPage() {
-  return <p>404</p>
+  return <h1>404</h1>
 }

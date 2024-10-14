@@ -1,11 +1,15 @@
 import type { Config } from "jest"
 
 const config: Config = {
+  preset: "ts-jest",
+  transform: {
+    "^.+\\.(ts|tsx|js|jsx)$": ["babel-jest", { configFile: "./jest.babel.config.js" }],
+  },
   // The test environment that will be used for testing
   testEnvironment: "jsdom",
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: "coverage",
+  // coverageDirectory: "coverage",
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
@@ -13,13 +17,13 @@ const config: Config = {
   // ],
 
   // Indicates which provider should be used to instrument code for coverage
-  coverageProvider: "v8",
+  coverageProvider: "babel",
 
   // Automatically clear mock calls, instances, contexts and results before every test
   clearMocks: true,
 
   // Indicates whether the coverage information should be collected while executing the test
-  collectCoverage: true,
+  // collectCoverage: true,
 
   // All imported modules in your tests should be mocked automatically
   // automock: false,
