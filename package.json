@@ -26,7 +26,7 @@
     "format": "prettier --log-level warn --write **/*.{ts,tsx,css}",
     "stop": "npx kill-port 3000",
     "prepare": "husky",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "test:watch": "jest --watch"
   },
   "dependencies": {

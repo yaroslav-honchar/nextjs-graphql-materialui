@@ -2,20 +2,26 @@
 
 import { createTheme } from "@mui/material/styles"
 
-const theme = createTheme({
+export const theme = createTheme({
   typography: {
     fontFamily: "var(--font-primary)",
   },
   palette: {
+    text: {
+      primary: "#ffffff",
+    },
+    background: {
+      default: "#2B2B2B",
+    },
     primary: {
-      light: "#CFFFEA",
-      main: "#9AF7E0",
-      dark: "#67C4AE",
+      light: "#FF6F61",
+      main: "#D32F2F",
+      dark: "#B71C1C",
     },
     secondary: {
-      main: "#A2A7F0",
-      light: "#dbdeff",
-      dark: "#7074B3",
+      main: "#A4D8E1",
+      light: "#91C4D7",
+      dark: "#7FAFD1",
     },
     error: {
       light: "#ffb3b3",
@@ -42,6 +48,19 @@ const theme = createTheme({
       contrastText: "#ffffff",
     },
   },
+  // components: {
+  //   MuiButton: {
+  //     defaultProps: {
+  //       disableRipple: true,
+  //     },
+  //     variants: [
+  //       {
+  //         props: { variant: "link" },
+  //         style: {
+  //           // color: "inherit",
+  //         },
+  //       },
+  //     ],
+  //   },
+  // },
 })
-
-export { theme }

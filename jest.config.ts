@@ -10,6 +10,7 @@ const customJestConfig = {
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
   },
+  // testPathIgnorePatterns: [/node_modules/, /.next/, "**/*.d.ts"],
   clearMocks: true,
 }
 
