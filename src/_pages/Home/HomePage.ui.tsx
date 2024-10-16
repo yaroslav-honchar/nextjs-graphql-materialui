@@ -1,4 +1,4 @@
-import { MainHero } from "@/widgets/MainHero"
+import { MainHero } from "@/widgets/MainHero/MainHero.ui"
 import { Tradings } from "@/widgets/Tradings"
 import { unstable_setRequestLocale } from "next-intl/server"
 import type { IHomePageProps } from "./HomePage.props"
