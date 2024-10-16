@@ -1,23 +1,10 @@
 import * as nextIntl from "next-intl"
-import { NextIntlClientProvider } from "next-intl"
 import React from "react"
-import "@testing-library/jest-dom"
-import { render, screen } from "@testing-library/react"
-import translatesEn from "../../_app/localization/translates/en.json"
+import translatesEn from "@/_app/localization/translates/en.json"
+import { render, screen } from "@/shared/test-utils/render-with-providers.util"
 import { NotFoundPage } from "./"
 
 const translations: Record<string, Record<string, string>> = translatesEn
-
-const renderWithIntl = (component: React.ReactNode) => {
-  return render(
-    <NextIntlClientProvider
-      locale="en"
-      messages={{}}
-    >
-      {component}
-    </NextIntlClientProvider>,
-  )
-}
 
 describe("[PAGE]: NotFoundPage", () => {
   beforeEach(() => {
@@ -28,7 +15,7 @@ describe("[PAGE]: NotFoundPage", () => {
   })
 
   it("renders headings", () => {
-    renderWithIntl(<NotFoundPage />)
+    render(<NotFoundPage />)
 
     const headingH1 = screen.getByRole("heading", { level: 1 })
     expect(headingH1).toBeInTheDocument()
@@ -39,7 +26,7 @@ describe("[PAGE]: NotFoundPage", () => {
   })
 
   it("renders a home link", () => {
-    renderWithIntl(<NotFoundPage />)
+    render(<NotFoundPage />)
 
     const link = screen.getByRole("link")
     expect(link).toBeInTheDocument()
