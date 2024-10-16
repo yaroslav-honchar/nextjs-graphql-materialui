@@ -7,7 +7,7 @@ import { render } from "@testing-library/react"
 const AllTheProviders = ({ children }: PropsWithChildren) => {
   return (
     <NextIntlClientProvider
-      locale="en"
+      locale={"en"}
       messages={{}}
     >
       {children}

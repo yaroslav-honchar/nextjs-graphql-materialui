@@ -1,19 +1,8 @@
-import * as nextIntl from "next-intl"
 import React from "react"
-import translatesEn from "@/_app/localization/translates/en.json"
-import { render, screen } from "@/shared/test-utils/render-with-providers.util"
+import { render, screen } from "@/shared/test-utils"
 import { NotFoundPage } from "./"
 
-const translations: Record<string, Record<string, string>> = translatesEn
-
 describe("[PAGE]: NotFoundPage", () => {
-  beforeEach(() => {
-    // @ts-ignore
-    jest.spyOn(nextIntl, "useTranslations").mockImplementation((namespace: string) => {
-      return (key: string) => translations[namespace][key]
-    })
-  })
-
   it("renders headings", () => {
     render(<NotFoundPage />)
 
