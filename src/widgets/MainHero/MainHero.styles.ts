@@ -37,6 +37,7 @@ export const styles: Record<string, SxProps> = {
   },
   movieInfoWrap: {
     display: "flex",
+    alignItems: "flex-end",
     gap: 2,
     m: "auto",
     paddingInline: "84px",
@@ -58,5 +59,8 @@ export const styles: Record<string, SxProps> = {
     display: "block",
     height: "100%",
     width: "64px",
+    position: "absolute",
+    top: 0,
+    zIndex: 10,
   },
 }
