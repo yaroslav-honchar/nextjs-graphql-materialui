@@ -1,3 +1,3 @@
-import type { IRouterLinkProps } from "@/shared/components/RouterLink"
+import type { RouterLinkProps } from "@/shared/components/RouterLink"
 
-export type LogoProps = Omit<IRouterLinkProps, "href" | "children">
+export type LogoProps = Omit<RouterLinkProps, "href" | "children">
