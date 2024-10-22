@@ -1,12 +1,11 @@
 "use client"
 
 import React from "react"
-import type { LinkProps } from "@/_app/localization"
 import { Link } from "@/_app/localization"
-import type { ButtonProps } from "@mui/material"
 import { Button } from "@mui/material"
+import type { RouterLinkProps } from "./RouterLink.props"
 
-export const RouterLink: React.FC<LinkProps & ButtonProps> = ({
+export const RouterLink: React.FC<RouterLinkProps> = ({
   locale,
   href,
   children,
