@@ -13,6 +13,7 @@ interface IMovie {
   video: boolean
   vote_average: number
   vote_count: number
+  media_type?: string
 }
 
 type MoviePickType<PickKeys extends keyof IMovie> = Pick<IMovie, PickKeys>
@@ -21,4 +22,15 @@ type MoviePreviewType = MoviePickType<
   "id" | "title" | "poster_path" | "release_date" | "vote_average" | "vote_count"
 >
 
-export type { IMovie, MoviePreviewType, MoviePickType }
+type MovieCarouselType = MoviePickType<
+  | "backdrop_path"
+  | "id"
+  | "original_title"
+  | "overview"
+  | "poster_path"
+  | "release_date"
+  | "title"
+  | "vote_average"
+>
+
+export type { IMovie, MoviePickType, MoviePreviewType, MovieCarouselType }

@@ -51,6 +51,22 @@ export const theme = createTheme({
   },
   palette,
   components: {
+    MuiTypography: {
+      styleOverrides: {
+        root: ({ ownerState, theme }) =>
+          theme.unstable_sx(
+            typeof ownerState.clamp === "number"
+              ? {
+                  display: "-webkit-box",
+                  textOverflow: "ellipsis",
+                  overflow: "hidden",
+                  WebkitLineClamp: ownerState.clamp,
+                  WebkitBoxOrient: "vertical",
+                }
+              : {},
+          ),
+      },
+    },
     MuiButton: {
       defaultProps: {
         disableRipple: true,

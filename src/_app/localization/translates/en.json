@@ -1,5 +1,7 @@
 {
-  "Common": {},
+  "Common": {
+    "details": "Details"
+  },
   "Tradings": {
     "title": "Trending"
   },

@@ -1,8 +1,8 @@
 "use client"
 
-import { format } from "date-fns"
 import React, { type MouseEvent, useState } from "react"
 import { Image } from "@/shared/components/Image"
+import { useFormatDate } from "@/shared/hooks/use-format-date"
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz"
 import { Box, Button, Card, CardContent, List, ListItem, Popover, Typography } from "@mui/material"
 import { actions } from "./CardMovie.actions"
@@ -11,6 +11,7 @@ import type { ICardMovieProps } from "./CardMovie.props"
 export const CardMovie: React.FC<ICardMovieProps> = ({ movie }) => {
   const { poster_path, title, release_date } = movie
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null)
+  const { format } = useFormatDate()
 
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget)
@@ -130,16 +131,10 @@ export const CardMovie: React.FC<ICardMovieProps> = ({ movie }) => {
           }}
         >
           <Typography
-            sx={{
-              display: "-webkit-box",
-              textOverflow: "ellipsis",
-              overflow: "hidden",
-              WebkitLineClamp: "1",
-              WebkitBoxOrient: "vertical",
-              fontWeight: 600,
-            }}
+            fontWeight={600}
             variant="subtitle2"
             component="p"
+            clamp={1}
           >
             {title}
           </Typography>
@@ -150,7 +145,7 @@ export const CardMovie: React.FC<ICardMovieProps> = ({ movie }) => {
             variant="caption"
             component="p"
           >
-            {format(new Date(release_date), "EEEEEE MM.dd.yyyy")}
+            {format(release_date, "EEEEEE MM.dd.yyyy")}
           </Typography>
         </CardContent>
       </Card>

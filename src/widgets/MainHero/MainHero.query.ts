@@ -1,15 +1,17 @@
 import { gql } from "graphql-tag"
 
-export const QUERY_TRADINGS = gql`
+export const QUERY_HERO = gql`
   query {
     tradings(timeWindow: "week") {
       results {
         id
+        backdrop_path
+        overview
+        title
         poster_path
         release_date
-        title
         vote_average
-        vote_count
+        original_title
       }
     }
   }
