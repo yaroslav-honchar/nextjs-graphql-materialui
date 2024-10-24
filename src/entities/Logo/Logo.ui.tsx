@@ -1,5 +1,3 @@
-"use client"
-
 import React from "react"
 import { fontSecondary } from "@/_app/fonts"
 import { RouterLink } from "@/shared/components/RouterLink"

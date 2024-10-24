@@ -11,6 +11,7 @@ export const RouterLink: React.FC<RouterLinkProps> = ({
   children,
   variant,
   color,
+  role = "link",
   ...rest
 }) => {
   return (
@@ -20,6 +21,7 @@ export const RouterLink: React.FC<RouterLinkProps> = ({
       href={href}
       variant={variant || "text"}
       color={color || "secondary"}
+      role={role}
       {...rest}
     >
       {children}
