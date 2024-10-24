@@ -27,7 +27,8 @@
     "stop": "npx kill-port 3000",
     "prepare": "husky",
     "test": "jest --passWithNoTests",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage"
   },
   "dependencies": {
     "@apollo/client": "^3.11.0-rc.2",
