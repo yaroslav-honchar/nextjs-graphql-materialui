@@ -2,13 +2,13 @@ import React from "react"
 import { Box, CircularProgress, Typography } from "@mui/material"
 import type { IVoteAverageProps } from "./VoteAverage.props"
 
-export const VoteAverage: React.FC<IVoteAverageProps> = ({ value }) => {
-  const getColor = (value: number) => {
-    const hue = (value * 120).toString(10)
-    return `hsl(${hue}, 100%, 50%)`
-  }
+const getColor = (value: number): string => {
+  const hue = (value * 120).toString(10)
+  return `hsl(${hue}, 100%, 50%)`
+}
 
-  const percentage = Math.round(value * 10)
+export const VoteAverage: React.FC<IVoteAverageProps> = ({ value }) => {
+  const percentage = Math.min(Math.max(value * 10, 0), 100)
 
   return (
     <Box position="relative">

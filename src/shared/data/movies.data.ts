@@ -151,7 +151,7 @@ export const dummyMoviesList: IMovie[] = [
     title: "Classified",
     original_title: "Classified",
     overview:
-      'Operating alone in the field for more than 20 years, a CIA hitman uses the "Help Wanted" section of the newspapers to get his orders from the Agency. His long-lost daughter, now a UK MI6 analyst, tracks him down to deliver shocking news: his CIA boss has been dead for years and the division long since shut down. Together, they set out to discover whose orders he\'s been executing.',
+      "Operating alone in the field for more than 20 years, a CIA hitman uses the 'Help Wanted' section of the newspapers to get his orders from the Agency. His long-lost daughter, now a UK MI6 analyst, tracks him down to deliver shocking news: his CIA boss has been dead for years and the division long since shut down. Together, they set out to discover whose orders he's been executing.",
     poster_path: "/g30i0WrZKTsgXtGtTmN6xsqlx69.jpg",
     media_type: "movie",
     adult: false,
